@@ -46,15 +46,16 @@ const FormCol = styled.div`
   flex-direction: column;
 `;
 
-const SignatureLine = ({ value, bold, image }) => {
+const SignatureLine = ({ value, bold, link }) => {
   if (value && value !== '' && value !== ' ') {
     return (
       <p
         style={{
-          fontSize: '11pt',
+          fontSize: '10pt',
           fontFamily: 'Calibri,sans-serif',
           margin: 0,
-          lineHeight: '12.65pt',
+          lineHeight: '14.65pt',
+          color: '#212121',
         }}
       >
         {bold ? <b>{value}</b> : value}
@@ -64,16 +65,40 @@ const SignatureLine = ({ value, bold, image }) => {
   return null;
 };
 
+const SignatureLink = () => {
+  return (
+    <p
+      style={{
+        margin: 0,
+      }}
+    >
+      <a
+        href="http://www.euri.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-auth="NotApplicable"
+        id="LPlnk500367"
+        style={{
+          fontSize: '10pt',
+          fontFamily: 'Calibri,sans-serif',
+          margin: 0,
+          lineHeight: '14.65pt',
+          color: 'dodgerblue',
+        }}
+      >
+        www.euri.com
+      </a>
+    </p>
+  );
+};
+
 const SignatureImage = () => {
   return (
     <>
       &nbsp;
       <p
         style={{
-          fontSize: '11pt',
-          fontFamily: 'Calibri,sans-serif',
           margin: 0,
-          lineHeight: '12.65pt',
         }}
       >
         <span>
@@ -204,9 +229,10 @@ const App = () => {
       <SignatureLine value={form?.jobTitle}></SignatureLine>
       <SignatureLine value={form?.phoneNumber}></SignatureLine>
       <SignatureImage></SignatureImage>
-      <SignatureLine value={adress}></SignatureLine>
-      <SignatureLine value={adressPlace}></SignatureLine>
-      <SignatureLine value={form?.VATNumber}></SignatureLine>
+      <SignatureLine value="Schaliënhoevedreef 20J"></SignatureLine>
+      <SignatureLine value="2800 Mechelen"></SignatureLine>
+      <SignatureLine value="BE 0465.357.302"></SignatureLine>
+      <SignatureLink></SignatureLink>
     </>
   );
 };
