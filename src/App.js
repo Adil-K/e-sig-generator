@@ -193,7 +193,7 @@ const App = () => {
           inputName={'phoneNumber'}
           register={register}
         ></FormInput>
-        <FormRow>
+        {/* <FormRow>
           <FormInput
             labelValue={'Straatnaam'}
             inputName={'street'}
@@ -221,7 +221,7 @@ const App = () => {
           labelValue={'BTW Nummer'}
           inputName={'VATNumber'}
           register={register}
-        ></FormInput>
+        ></FormInput> */}
         <Submit type="submit" value="Genereer"></Submit>
       </Form>
 
