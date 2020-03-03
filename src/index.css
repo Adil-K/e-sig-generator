@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@keyframes slideUpDisolve {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+  15% {
+    bottom: 30px;
+  }
+  75% {
+    bottom: 30px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
