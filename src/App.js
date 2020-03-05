@@ -11,13 +11,11 @@ import SignatureHtml from './components/signature/SignatureHtml';
 import FormInput from './components/FormInput';
 import Toaster from './components/Toaster';
 
+// custom Hook
 const useConvertComponentToString = component => {
   const [value, setValue] = useState(null);
   useEffect(() => {
     setValue(renderToString(component));
-    return () => {
-      alert('dismount');
-    };
   }, [component]);
   return value;
 };
@@ -52,7 +50,6 @@ const App = () => {
       }));
     }, 3000);
 
-    console.log('Gekopieerd', toastData);
     copy(data);
   };
 
