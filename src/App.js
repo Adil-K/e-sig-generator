@@ -23,10 +23,7 @@ const useConvertComponentToString = component => {
 const App = () => {
   const { register, handleSubmit, errors } = useForm();
   const [formData, setForm] = useState({ firstName: '', lastName: '' });
-  const [toastData, setToast] = useState({
-    isShown: false,
-    message: '',
-  });
+  const [toastData, setToast] = useState({ message: null });
 
   const htmlString = useConvertComponentToString(generateSignature());
 

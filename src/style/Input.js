@@ -7,6 +7,8 @@ const Input = styled.input`
   background-color: #fff;
   margin: 5px;
   font-size: 1em;
+  animation: ${props =>
+    props.invallid ? 'borderGlow 1.5s ease forwards' : ''};
 `;
 
 export default Input;
